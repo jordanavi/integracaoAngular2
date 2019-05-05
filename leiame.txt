@@ -1,4 +1,41 @@
- Arquivo angular-cli.json � representa��o do projeto � caminhos, arquivos e
-configura��es
-- Arquivo karma.conf.js � configura��o do Karma, biblioteca para testes
-unit�rios.
+- Arquivo angular-cli.json – representação do projeto – caminhos, arquivos e configurações
+- Arquivo karma.conf.js – configuração do Karma, biblioteca para testes unitários.
+- Arquivo package.json – dependências do projeto
+- Separado em 3 partes:
+	- Primeira parte: dados do projeto, como versão, nome, scripts e teste
+	- Dependencies: dependências do projeto para produção
+	- devDependencies: dependências do projeto para desenvolvimento. Arquivos de testes estarão neste diretório.
+- Arquivo protractor.conf.js – arquivo de configuração da biblioteca Protractor, feito para testes de integração do projeto.
+- Arquivo tslint.json – configurações para usar o comando ng lint, que são boas práticas do desenvolvimento em Angular
+
+-------------------------------------------
+SLIDE PAGINA 22 
+
+Pasta src
+- Pasta app – código-fonte da aplicação
+- Pasta environment – configuração do build
+- Favicon.ico – imagem que ficará na barra de navegação do browser
+- Index.hml – página inicial, tags para criar as páginas web (não será editado)
+- main.ts – direção para inicialização do projeto no navegador
+- polyfills.ts – bibliotecas para fazer um de / para ES6 em ES5
+- styles.css – css global da aplicação
+
+-------------------------------------------
+
+- Pasta src/app
+- Conterá todos os novos componentes, serviços, templates, configuração de CSS e
+arquivos de teste dos componentes.
+- Contém por padrão 4 arquivos de mesmo nome: app.component {css, html, .spec.ts, ts}
+- app.module.ts – arquivo de declaração dos objetos dentro do projeto.
+- Dentro de declarations é colocado o nome de cada novo objeto criado dentro do projeto.
+- Dentro de bootstrap, é colocado o nome do arquivo que será carregado primeiramente na
+aplicação.
+
+-------------------------------------------
+
+- Template - visão html
+- Componente – controlador view
+- Metadata – configuração entre a
+classe e o template
+
+-------------------------------------------

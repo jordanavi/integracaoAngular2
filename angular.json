@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "integracaoAngular2": {
+    "cadastrocli": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/integracaoAngular2",
+            "outputPath": "dist/cadastrocli",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "integracaoAngular2:build"
+            "browserTarget": "cadastrocli:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "integracaoAngular2:build:production"
+              "browserTarget": "cadastrocli:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "integracaoAngular2:build"
+            "browserTarget": "cadastrocli:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "integracaoAngular2-e2e": {
+    "cadastrocli-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "integracaoAngular2:serve"
+            "devServerTarget": "cadastrocli:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "integracaoAngular2:serve:production"
+              "devServerTarget": "cadastrocli:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "integracaoAngular2"
+  "defaultProject": "cadastrocli"
 }
