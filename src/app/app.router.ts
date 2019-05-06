@@ -51,4 +51,5 @@ const routes : Routes = [
         component: AreaConhecimentoComponent
     }
 ];
-export const RoutingModule = RouterModule.forRoot(routes);
+
+export const Routing = RouterModule.forRoot(routes);
