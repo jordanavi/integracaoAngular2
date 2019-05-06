@@ -11,3 +11,5 @@ mat-toolbar{
   z-index: 100;
   width: 100% !important;
 }
+
+.logo{margin-top: 5%;}

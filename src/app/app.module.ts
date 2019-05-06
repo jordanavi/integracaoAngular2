@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routing } from './app.router';
+import { routes } from './app.router';
 
 /*--------------imports copiado do menu---------------*/
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -21,6 +21,8 @@ import { ConteudoComponent } from './conteudo/conteudo.component';
 import { DisciplinaComponent } from './disciplina/disciplina.component';
 import { ProfessorComponent } from './professor/professor.component';
 import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -35,7 +37,7 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    Routing,
+    RouterModule.forRoot(routes),
     /*--------------imports copiado do menu---------------*/
     BrowserAnimationsModule,
     MatIconModule,

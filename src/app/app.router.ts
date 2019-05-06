@@ -1,11 +1,12 @@
-import {Routes, RouterModule } from '@angular/router'
+/*import {Routes, RouterModule } from '@angular/router'*/
+import { RouterModule, Routes } from '@angular/router';
 import { ProfessorComponent } from './professor/professor.component';
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { DisciplinaComponent } from './disciplina/disciplina.component';
 import { AreaConhecimentoComponent } from './area-conhecimento/area-conhecimento.component';
 import { HomeComponent } from './home/home.component';
 
-const routes : Routes = [
+export const routes : Routes = [
     {
         path: '',
         component: HomeComponent
@@ -52,4 +53,4 @@ const routes : Routes = [
     }
 ];
 
-export const Routing = RouterModule.forRoot(routes);
+/*export const Routing = RouterModule.forRoot(routes);*/
