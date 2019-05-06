@@ -17,6 +17,8 @@ import { AreaConhecimentoComponent } from './area-conhecimento/area-conhecimento
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { DisciplinaComponent } from './disciplina/disciplina.component';
 import { ProfessorComponent } from './professor/professor.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { ProfessorComponent } from './professor/professor.component';
     AreaConhecimentoComponent,
     ConteudoComponent,
     DisciplinaComponent,
-    ProfessorComponent
+    ProfessorComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
