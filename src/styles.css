@@ -12,5 +12,9 @@ html {
   width: 100% !important;
 }
 */
+.InitialText {
+  color:#2F4F4F;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .logo{margin-top: 5%;}
