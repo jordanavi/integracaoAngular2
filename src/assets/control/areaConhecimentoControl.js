@@ -1,13 +1,13 @@
 var app = angular.module('todoApp', [])
-.controller('DisciplinaController', function($scope,$http) {
+.controller('EditoraController', function($scope,$http) {
   
-  var url = 'http://localhost:9000/disciplina';
+  var url = 'http://localhost:9000/areaConhecimentos';
   
-  $scope.nomeTela = "Cadastro de Disciplinas";
+  /*$scope.nomeTela = "Cadastro de Área de Conhecimento";*/
 
   $scope.pesquisar = function() {
     $http.get(url).then(function (response) {
-        $scope.disciplinas = response.data;
+        $scope.areaConhecimento = response.data;
     }, function (error) {
         alert(error);
         console.log(error);
@@ -15,12 +15,12 @@ var app = angular.module('todoApp', [])
 }
 
 $scope.salvar = function() {
-    if (typeof $scope.disciplina.idDisciplina == 'undefined') {
-        if(typeof $scope.disciplina.descricao == 'undefined'){
-            alert('Digite uma disciplina');
+    if (typeof $scope.editora.idAreaConhecimento == 'undefined') {
+        if(typeof $scope.areaConhecimento.nome == 'undefined'){
+            alert('Digite uma área de conhecimento');
         }else{
-            $http.post(url,$scope.disciplina).then(function (response) {
-                $scope.disciplinas.push(response.data);
+            $http.post(url,$scope.areaConhecimento).then(function (response) {
+                $scope.areaConhecimentos.push(response.data);
                 $scope.novo();
             }, function (error) {
                 alert(error);
@@ -28,7 +28,7 @@ $scope.salvar = function() {
             });
         }
     } else {
-        $http.put(url,$scope.disciplina).then(function () {
+        $http.put(url,$scope.areaConhecimento).then(function () {
             $scope.pesquisar();
             $scope.novo();
         }, function (error) {
@@ -39,10 +39,10 @@ $scope.salvar = function() {
 }
 
 $scope.excluir = function() {
-    if (typeof $scope.disciplina.idDisciplina == 'undefined') {
-        alert('Escolha uma Disciplina');
+    if (typeof $scope.areaConhecimento.idAreaConhecimento == 'undefined') {
+        alert('Escolha uma area de conhecimento');
     } else {
-        urlExcluir = url+"/"+$scope.disciplina.idDisciplina;
+        urlExcluir = url+"/"+$scope.areaConhecimento.idAreaConhecimento;
         $http.delete(urlExcluir).then(function () {
             $scope.pesquisar();
             $scope.novo();
@@ -54,11 +54,11 @@ $scope.excluir = function() {
 }
 
 $scope.novo = function() {
-  $scope.disciplina = {};
+  $scope.areaConhecimento = {};
 }        
 
-$scope.seleciona = function(disciplina) {
-  $scope.disciplina = disciplina;
+$scope.seleciona = function(areaConhecimento) {
+  $scope.areaConhecimento = areaConhecimento;
 }
 
 $scope.pesquisar();
