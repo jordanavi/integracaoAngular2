@@ -15,7 +15,7 @@
       <p>Professor works!</p>
     </div>
     <div class="container"> 
-      <br />
+      <br/>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item active" aria-current="page">{{nomeTela}}</li>
@@ -66,7 +66,7 @@
                     <div class="form-group col-md-4">
                       <label for="inputCidade">Cidade</label>
                       <input type="text" class="form-control is-valid" id="inputCidade" placeholder="Cidade" required ng-model="professor.cidade">
-                      <div class="invalid-feedback">Digite o cidade. </div>
+                      <div class="invasdlid-feedback">Digite o cidade. </div>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="inputCep">CEP</label>
@@ -111,8 +111,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr ng-repeat="professorTabela in professores" ng-click="seleciona(professorTabela)">
-                      <th scope="row">{{ professorTabela.codigo }}</th>
+                      <!--NA LINHA DE CIMA ng-click="seleciona(professorTabela)"-->
+                      <!-- <th scope="row">{{ professorTabela.codigo }}</th> -->7
+                    <tr *ngFor="let professorTabela of professores">
+                      <a [router-link] = "[professorTabela.codigo]">
+                      <td>{{ professorTabela.codigo }}</td></a>
                       <td>{{ professorTabela.nome }}</td>
                       <td>{{ professorTabela.AreaFormacao}}</td>
                       <td>{{ professorTabela.endereco }}</td>

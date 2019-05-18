@@ -67,9 +67,12 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr ng-repeat="disciplinasTabela in disciplinas" ng-click="seleciona(disciplinasTabela)">
-                      <th scope="row">{{ disciplinasTabela.idDisciplinas }}</th>
-                      <td>{{ disciplinasTabela.descricao }}</td>
+                    <!-- <tr ng-repeat="disciplinasTabela in disciplinas" ng-click="seleciona(disciplinasTabela)">
+                      <th scope="row">{{ disciplinasTabela.idDisciplinas }}</th> -->
+                      <tr *ngFor="let disciplinasTabela for disciplinas">
+                        <a [routerLink] = "[disciplinasTabela.codigo"]></a>
+                        <td>{{ disciplinasTabela.codigo }}</td>
+                        <td>{{ disciplinasTabela.descricao }}</td>
                     </tr>
                   </tbody>
                 </table>

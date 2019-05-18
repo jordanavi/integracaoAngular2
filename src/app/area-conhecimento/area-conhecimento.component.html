@@ -12,8 +12,12 @@
   </head>
   <body>
       <div class="jumbotron text-center">
-        <p>Area de conhecimento works!</p>
-    </div>
+        <p>I – linguagens e suas tecnologias; <br>
+        II – matemática e suas tecnologias; <br>
+        III – ciências da natureza e suas tecnologias; <br>
+        IV – ciências humanas e sociais aplicadas; <br>
+        V – formação técnica e profissional </p>
+      </div>
     <div class="container"> 
       <br />
       <nav aria-label="breadcrumb">
@@ -63,8 +67,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr ng-repeat="areaConhecimentosTabela in areaConhecimentos" ng-click="seleciona(areaConhecimentosTabela)">
-                      <th scope="row">{{ areaConhecimentosTabela.idAreaConhecimento }}</th>
+                    <!--ng-click="seleciona(areaConhecimentosTabela)"> -->
+                    <!-- <th scope="row">{{ areaConhecimentosTabela.idAreaConhecimento }}</th> -->
+                    <tr *ngFor ="areaConhecimentosTabela in areaConhecimentos">
+                      <a [routerLink] = "[areaConhecimentosTabela.codigo]"> 
+                      <td>{{ areaConhecimentosTabela.codigo }}</td></a>
                       <td>{{ areaConhecimentosTabela.nome }}</td>
                     </tr>
                   </tbody>

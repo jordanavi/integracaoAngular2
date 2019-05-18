@@ -92,8 +92,11 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr ng-repeat="conteudosTabela in conteudos" ng-click="seleciona(conteudosTabela)">
-                      <th scope="row">{{ conteudosTabela.codigo }}</th>
+                    <!-- ng-click="seleciona(conteudosTabela)" -->
+                    <!-- <th scope="row">{{ conteudosTabela.codigo }}</th> -->
+                    <tr *ngFor="let conteudosTabela of conteudos"></tr>
+                      <a [routerLink] = "[conteudosTabela.codigo]">
+                      <td>{{ conteudosTabela.codigo}}</td> </a>
                       <td>{{ conteudosTabela.nome }}</td>
                       <td>{{ conteudosTabela.descricao }}</td>
                       <td>{{ conteudosTabela.competencia }}</td>
