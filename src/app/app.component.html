@@ -20,10 +20,10 @@
     <mat-sidenav-container fxFlexFill>
       <mat-sidenav #sidenav>
         <mat-nav-list><!-- Menu compacto para responsividade -->
-          <a href="/areaConhecimento" mat-list-item><mat-icon>school</mat-icon>Area de Conhecimento</a>
-          <a href="/disciplina" mat-list-item><mat-icon>layers</mat-icon>Disciplina</a>
-          <a href="/conteudo" mat-list-item><mat-icon>library_books</mat-icon>Conteúdo</a>
-          <a href="/professor" mat-list-item><mat-icon>account_box</mat-icon>Professor</a>
+          <a routerLink="/areaConhecimento" mat-list-item><mat-icon>school</mat-icon>Area de Conhecimento</a>
+          <a routerLink="/disciplina" mat-list-item><mat-icon>layers</mat-icon>Disciplina</a>
+          <a routerLink="/conteudo" mat-list-item><mat-icon>library_books</mat-icon>Conteúdo</a>
+          <a routerLink="/professor" mat-list-item><mat-icon>account_box</mat-icon>Professor</a>
           <a (click)="sidenav.toggle()" mat-list-item><mat-icon>close</mat-icon> Close</a>
         </mat-nav-list>
       </mat-sidenav>
