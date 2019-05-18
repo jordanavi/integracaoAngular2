@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AreaConhecimento } from '../area-conhecimento';
 
 @Component({
   selector: 'app-area-conhecimento',
@@ -9,7 +10,13 @@ export class AreaConhecimentoComponent implements OnInit {
 
   constructor() { }
 
+  areaConhecimentos : AreaConhecimento [] = [];
+
   ngOnInit() {
+    this.areaConhecimentos = [{
+      'codigo' : 1,
+      'nome' : 'Linguagens'
+    }]
   }
 
 }

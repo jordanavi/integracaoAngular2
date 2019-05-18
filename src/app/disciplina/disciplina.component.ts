@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Disciplina } from '../disciplina';
 
 @Component({
   selector: 'app-disciplina',
@@ -9,7 +10,13 @@ export class DisciplinaComponent implements OnInit {
 
   constructor() { }
 
+  disciplinas: Disciplina [] = [];
+
   ngOnInit() {
+    this.disciplinas = [{
+      'codigo' : 1,
+      'descricao' : 'Esta e a disciplina de portugues'
+    }]
   }
 
 }
