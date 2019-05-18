@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { conteudoRouting } from './conteudo.routing';
+import { conteudoRouting } from './conteudos.routing';
 import { ConteudoComponent } from './conteudo.component';
 
 @NgModule({
@@ -10,4 +10,4 @@ import { ConteudoComponent } from './conteudo.component';
     ],
     declarations: [ConteudoComponent]
 })
-export class ContedudosModule{ }
+export class ConteudosModule{ }
