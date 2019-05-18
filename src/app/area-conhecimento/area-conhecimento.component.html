@@ -67,9 +67,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <!--ng-click="seleciona(areaConhecimentosTabela)"> -->
-                    <!-- <th scope="row">{{ areaConhecimentosTabela.idAreaConhecimento }}</th> -->
-                    <tr *ngFor ="areaConhecimentosTabela in areaConhecimentos">
+                    <tr *ngFor ="let areaConhecimentosTabela of areaConhecimentos">
                       <a [routerLink] = "[areaConhecimentosTabela.codigo]"> 
                       <td>{{ areaConhecimentosTabela.codigo }}</td></a>
                       <td>{{ areaConhecimentosTabela.nome }}</td>

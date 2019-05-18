@@ -92,9 +92,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <!-- ng-click="seleciona(conteudosTabela)" -->
-                    <!-- <th scope="row">{{ conteudosTabela.codigo }}</th> -->
-                    <tr *ngFor="let conteudosTabela of conteudos"></tr>
+                    <tr *ngFor="let conteudosTabela of conteudos">
                       <a [routerLink] = "[conteudosTabela.codigo]">
                       <td>{{ conteudosTabela.codigo}}</td> </a>
                       <td>{{ conteudosTabela.nome }}</td>

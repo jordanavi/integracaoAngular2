@@ -111,19 +111,17 @@
                     </tr>
                   </thead>
                   <tbody>
-                      <!--NA LINHA DE CIMA ng-click="seleciona(professorTabela)"-->
-                      <!-- <th scope="row">{{ professorTabela.codigo }}</th> -->7
-                    <tr *ngFor="let professorTabela of professores">
-                      <a [router-link] = "[professorTabela.codigo]">
-                      <td>{{ professorTabela.codigo }}</td></a>
-                      <td>{{ professorTabela.nome }}</td>
-                      <td>{{ professorTabela.AreaFormacao}}</td>
-                      <td>{{ professorTabela.endereco }}</td>
-                      <td>{{ professorTabela.cidade }}</td>
-                      <td>{{ professorTabela.cep }}</td>
-                      <td>{{ professorTabela.pais }}</td>
-                      <td>{{ professorTabela.telefone }}</td>
-                      <td>{{ professorTabela.email}}</td>
+                    <tr *ngFor="let professoresTabela of professores">
+                      <a [routerLink] = "[professoresTabela.codigo]">
+                      <td>{{ professoresTabela.codigo }}</td></a>
+                      <td>{{ professoresTabela.nome }}</td>
+                      <td>{{ professoresTabela.AreaFormacao}}</td>
+                      <td>{{ professoresTabela.endereco }}</td>
+                      <td>{{ professoresTabela.cidade }}</td>
+                      <td>{{ professoresTabela.cep }}</td>
+                      <td>{{ professoresTabela.pais }}</td>
+                      <td>{{ professoresTabela.telefone }}</td>
+                      <td>{{ professoresTabela.email}}</td>
                     </tr>
                   </tbody>
                 </table>
