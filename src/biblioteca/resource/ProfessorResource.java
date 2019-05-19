@@ -24,7 +24,7 @@ import com.biblioteca.repository.ProfessorRepository;
 
 @RestController
 @RequestMapping(value = "/professores")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ProfessorResource {
 
 	@Autowired

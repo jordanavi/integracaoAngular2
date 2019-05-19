@@ -24,7 +24,7 @@ import com.biblioteca.repository.AreaConhecimentoRepository;
 
 @RestController
 @RequestMapping(value = "/areaconhecimentos")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AreaConhecimentoResource {
 
 	@Autowired

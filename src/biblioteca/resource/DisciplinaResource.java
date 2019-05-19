@@ -24,7 +24,7 @@ import com.biblioteca.repository.DisciplinaRepository;
 
 @RestController
 @RequestMapping(value = "/disciplinas")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:4200")
 public class DisciplinaResource {
 
 	@Autowired

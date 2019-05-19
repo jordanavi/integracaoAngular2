@@ -24,7 +24,7 @@ import com.biblioteca.repository.ConteudoRepository;
 
 @RestController
 @RequestMapping(value = "/conteudos")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ConteudoResource {
 
 	@Autowired
