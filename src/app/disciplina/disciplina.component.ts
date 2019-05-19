@@ -37,6 +37,12 @@ export class DisciplinaComponent implements OnInit {
       }
     );
 
+    this.disciplinaService.disciplinasChanged.subscribe(
+      (observable: any) => observable.subscribe(
+        data => this.disciplina = data
+      )
+    );
+          
     this.disciplinas = [{
     'codigo' : 1,
     'descricao' : 'Esta e a disciplina de portugues'

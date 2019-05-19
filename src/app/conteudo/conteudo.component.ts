@@ -37,6 +37,12 @@ export class ConteudoComponent implements OnInit {
       }
     );
 
+    this.conteudoService.conteudosChanged.subscribe(
+      (observable: any) => observable.subscribe(
+        data => this.conteudo = data
+      )
+    );
+
     this.conteudos= [{
       'codigo': 1,
       'nome': 'conteudo de portugues',

@@ -37,6 +37,12 @@ export class AreaConhecimentoComponent implements OnInit {
       }
     );
     
+    this.areaConhecimentoService.areaConhecimentosChanged.subscribe(
+      (observable: any) => observable.subscribe(
+        data => this.areaConhecimento = data
+      )
+    );
+
     this.areaConhecimentos = [{
     'codigo' : 1,
     'nome' : 'Linguagens'

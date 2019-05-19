@@ -22,7 +22,6 @@ import { DisciplinaComponent } from './disciplina/disciplina.component';
 import { ProfessorComponent } from './professor/professor.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
-import { DisciplinaFormComponent } from './disciplina/disciplina-form/disciplina-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -36,8 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     ConteudoComponent,
     DisciplinaComponent,
     ProfessorComponent,
-    HomeComponent,
-    DisciplinaFormComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

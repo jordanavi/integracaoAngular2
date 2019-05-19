@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Professor } from '../professor';
 import { ProfessoresService } from './professores.service';
+import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-professor',
@@ -36,6 +37,13 @@ export class ProfessorComponent implements OnInit {
         } else {this.isNew = true;}
       }
     );
+    
+    this.professorService.professoresChanged.subscribe(
+      (observable: any) => observable.subscribe(
+        data => this.professor = data
+      )
+    );
+
     this.professores= [{
       'codigo': 1,
       'nome':'Joao da Cunha',
