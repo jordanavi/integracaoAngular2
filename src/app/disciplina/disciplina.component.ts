@@ -36,6 +36,11 @@ export class DisciplinaComponent implements OnInit {
         } else {this.isNew = true;}
       }
     );
+
+    this.disciplinas = [{
+    'codigo' : 1,
+    'descricao' : 'Esta e a disciplina de portugues'
+    }]
   }
 
     /******** */
@@ -86,10 +91,6 @@ export class DisciplinaComponent implements OnInit {
     // this.disciplinaService.getAll()
     //   .subscribe(data =>this.disciplinas = data, err =>{alert('Aconteceu um erro!'); });
 
-    // this.disciplinas = [{
-    //   'codigo' : 1,
-    //   'descricao' : 'Esta e a disciplina de portugues'
-    // }]
   }
 
 

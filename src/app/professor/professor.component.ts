@@ -36,6 +36,17 @@ export class ProfessorComponent implements OnInit {
         } else {this.isNew = true;}
       }
     );
+    this.professores= [{
+      'codigo': 1,
+      'nome':'Joao da Cunha',
+      'formacao':'Letras',
+      'endereco':'Rua A',
+      'cidade':'Uberlandia',
+      'cep':'38408214',
+      'pais':'Brasil',
+      'telefone':'34998685479',
+      'email':'joaocunha@iftm.edu.br'
+    }]
   }
 
     /******** */
@@ -88,18 +99,7 @@ export class ProfessorComponent implements OnInit {
     this.professorService.getAll()
       .subscribe(data =>this.professores = data, err =>{alert('Aconteceu um erro!'); });
 
-    this.professores= [{
-      'codigo': 1,
-      'nome':'Joao da Cunha',
-      'formacao':'Letras',
-      'endereco':'Rua A',
-      'cidade':'Uberlandia',
-      'cep':'38408214',
-      'pais':'Brasil',
-      'telefone':'34998685479',
-      'email':'joaocunha@iftm.edu.br'
-
-    }]*/
+*/
   }
 
 

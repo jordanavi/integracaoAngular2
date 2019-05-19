@@ -36,6 +36,15 @@ export class ConteudoComponent implements OnInit {
         } else {this.isNew = true;}
       }
     );
+
+    this.conteudos= [{
+      'codigo': 1,
+      'nome': 'conteudo de portugues',
+      'descricao': 'esta e a descricao do conteudo de portuges...',
+      'competencia' : "esta e a competencia do conteudo de portugues...",
+      'disciplina': null,
+      'areaConhecimento' : null
+    }]
   }
 
     /******** */
@@ -88,14 +97,7 @@ export class ConteudoComponent implements OnInit {
     this.conteudoService.getAll()
       .subscribe(data =>this.conteudos = data, err =>{alert('Aconteceu um erro!'); });
 
-    this.conteudos= [{
-      'codigo': 1,
-      'nome': 'conteudo de portugues',
-      'descricao': 'esta e a descricao do conteudo de portuges...',
-      'competencia' : "esta e a competencia do conteudo de portugues...",
-      'disciplina': null,
-      'areaConhecimento' : null
-    }]
+    
   }
 */
 }

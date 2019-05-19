@@ -36,6 +36,11 @@ export class AreaConhecimentoComponent implements OnInit {
         } else {this.isNew = true;}
       }
     );
+    
+    this.areaConhecimentos = [{
+    'codigo' : 1,
+    'nome' : 'Linguagens'
+    }]
   }
 
     /******** */
@@ -86,10 +91,5 @@ export class AreaConhecimentoComponent implements OnInit {
     
     // this.areaConhecimentoService.getAll()
     //   .subscribe(data =>this.areaConhecimentos = data, err =>{alert('Aconteceu um erro!'); });
-
-    // this.areaConhecimentos = [{
-    //   'codigo' : 1,
-    //   'nome' : 'Linguagens'
-    // }]
   }
 
