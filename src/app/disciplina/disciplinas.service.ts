@@ -7,7 +7,7 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import { Observable } from 'rxjs/Observable';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
   export class DisciplinasService{
     private url: string = 'http://localhost:9000/disciplinas';
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Disciplina } from '../disciplina';
 import { DisciplinasService } from './disciplinas.service';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs/Subscription';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -22,11 +22,13 @@ export class DisciplinaComponent implements OnInit {
 
   disciplinas: Disciplina [] = [];
 
+  criterio: String;
+
   ngOnInit() {
     this.novo();
     this.subscription = this.route.params.subscribe(
       (params: any) => {
-        if (params.hashOwnProperty('id')){
+        if (params.hasOwnProperty('id')){
           this.isNew = false;
           this.disciplinaIndex = params['id'];
           this.disciplinaService.get(this.disciplinaIndex)

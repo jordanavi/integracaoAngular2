@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Conteudo } from '../conteudo';
 import { ConteudosService } from './conteudos.service';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs/Subscription';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -22,11 +22,13 @@ export class ConteudoComponent implements OnInit {
 
   conteudos: Conteudo [] = [];
 
+  criterio: String;
+
   ngOnInit() {
     this.novo();
     this.subscription = this.route.params.subscribe(
       (params: any) => {
-        if (params.hashOwnProperty('id')){
+        if (params.hasOwnProperty('id')){
           this.isNew = false;
           this.conteudoIndex = params['id'];
           this.conteudoService.get(this.conteudoIndex)

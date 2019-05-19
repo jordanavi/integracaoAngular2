@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Professor } from '../professor';
 import { ProfessoresService } from './professores.service';
-import { Subscription } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-professor',
@@ -20,13 +20,15 @@ export class ProfessorComponent implements OnInit {
               private router:Router,
               private professorService: ProfessoresService) { }
 
-  professores: Professor [] = [];
+  professores: Professor[] = [];
+
+  criterio: String;
 
   ngOnInit() {
     this.novo();
     this.subscription = this.route.params.subscribe(
       (params: any) => {
-        if (params.hashOwnProperty('id')){
+        if (params.hasOwnProperty('id')){
           this.isNew = false;
           this.professorIndex = params['id'];
           this.professorService.get(this.professorIndex)
@@ -57,29 +59,29 @@ export class ProfessorComponent implements OnInit {
       result = this.professorService.update(this.professor);
       }
     this.novo();
-      this.voltar();
-      result.subscribe(data => alert('sucesso ' +data),
-      err => {
-        alert("An error occurred. "+ err);
+    this.voltar();
+    result.subscribe(data => alert('sucesso ' +data),
+    err => {
+      alert("An error occurred. "+ err);
       });
-    }
+  }
   
-    excluir() {
-      if (this.professor.codigo == null) {
-        alert('Selecione algum professor');
-      } else {
-        if (confirm('Você realmente quer excluir o professor '+this.professor.nome+'?')) {
-          this.professorService.remove(this.professor.codigo)
-          .subscribe(
-            data => alert('Professor removido '+data),
-            err => {
-              alert('Professor não removido');
-            });
-            this.novo();
-            this.voltar();
-        }
+  excluir() {
+    if (this.professor.codigo == null) {
+      alert('Selecione algum professor');
+    } else {
+      if (confirm('Você realmente quer excluir o professor '+this.professor.nome+'?')) {
+        this.professorService.remove(this.professor.codigo)
+        .subscribe(
+          data => alert('Professor removido '+data),
+          err => {
+            alert('Professor não removido');
+          });
+        this.novo();
+        this.voltar();
       }
     }
+  }
   
     /******** 
     

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AreaConhecimento } from '../area-conhecimento';
 import { AreaConhecimentosService } from './area-conhecimentos.service';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs/Subscription';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -22,12 +22,13 @@ export class AreaConhecimentoComponent implements OnInit {
   
   areaConhecimentos : AreaConhecimento [] = [];
 
-  ngOnInit() {
+  criterio: String;
 
+  ngOnInit() {
     this.novo();
     this.subscription = this.route.params.subscribe(
       (params: any) => {
-        if (params.hashOwnProperty('id')){
+        if (params.hasOwnProperty('id')){
           this.isNew = false;
           this.areaConhecimentoIndex = params['id'];
           this.areaConhecimentoService.get(this.areaConhecimentoIndex)

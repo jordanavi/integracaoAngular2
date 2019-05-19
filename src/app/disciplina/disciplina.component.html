@@ -33,12 +33,12 @@
                   <div class="form-row">
                     <div class="form-group col-md-2">
                       <label for="inputCodigo">Codigo</label>
-                      <input type="text" class="form-control" id="inputCodigo" disabled [(ngModel)]="categoria.idCategoria" name="txtCodigo">
+                      <input type="text" class="form-control" disabled [(ngModel)]="disciplina.codigo" name="txtCodigo">
                     </div>
                     <!-- Criar uma linha para nome -->
                     <div class="form-group col-md-6">
                       <label for="inputNome">Descrição</label>
-                      <input type="text" class="form-control is-valid" id="inputNome" placeholder="Descrição" required [(ngModel)]="categoria.descricao" name="txtDescricao">
+                      <input type="text" class="form-control is-valid" placeholder="Descrição" required [(ngModel)]="disciplina.descricao" name="txtDescricao">
                       <div class="invalid-feedback">
                            Digite a descrição.
                       </div>

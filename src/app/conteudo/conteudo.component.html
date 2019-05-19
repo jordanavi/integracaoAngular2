@@ -33,18 +33,18 @@
                   <div class="form-row">
                     <div class="form-group col-md-2">
                           <label for="inputCodigo">Codigo</label>
-                          <input type="text" class="form-control" disabled required id="inputCodigo" [(ngModel)]="conteudo.codigo" name="txtCodigo" >
+                          <input type="text" class="form-control" disabled required [(ngModel)]="conteudo.codigo" name="txtCodigo" >
                     </div>
                     <div class="form-group col-md-4">
                       <label for="inputNome">Nome</label>
-                      <input type="text" class="form-control is-valid" placeholder="Nome" required id="inputIsbn" [(ngModel)]="conteudo.nome" name="txtNome">
+                      <input type="text" class="form-control is-valid" placeholder="Nome" required [(ngModel)]="conteudo.nome" name="txtNome">
                       <div class="invalid-feedback">
                         Digite o titulo do conteudo.
                    </div>
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputTitulo">Descricao</label>
-                      <input type="text" class="form-control is-valid" id="inputTitulo" placeholder="Descrição" required [(ngModel)]="conteudo.descricao" name="txtDescricao">
+                      <input type="text" class="form-control is-valid" placeholder="Descrição" required [(ngModel)]="conteudo.descricao" name="txtDescricao">
                       <div class="invalid-feedback">
                            Digite a descricao.
                       </div>
@@ -53,7 +53,7 @@
                   <div class="form-row">
                     <div class="form-group col-md-4">
                       <label for="inputAutor">Competência</label>
-                      <input type="text" class="form-control is-valid" id="inputAutor" placeholder="Competência" required [(ngModel)]="conteudo.competencia" name="selCompetencia">
+                      <input type="text" class="form-control is-valid" placeholder="Competência" required [(ngModel)]="conteudo.competencia" name="selCompetencia">
                       <div class="invalid-feedback">
                            Digite a competência.
                       </div>

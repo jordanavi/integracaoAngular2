@@ -25,6 +25,7 @@ import { RouterModule } from '@angular/router';
 import { DisciplinaFormComponent } from './disciplina/disciplina-form/disciplina-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -44,6 +45,7 @@ import { HttpModule } from '@angular/http';
     RouterModule.forRoot(routes),
     FormsModule,
     HttpModule,
+    HttpClientModule,
     /*--------------imports copiado do menu---------------*/
     BrowserAnimationsModule,
     MatIconModule,
