@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Conteudo } from '../conteudo';
+import { ConteudosService } from './conteudos.service';
 
 
 @Component({
@@ -9,11 +10,14 @@ import { Conteudo } from '../conteudo';
 })
 export class ConteudoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private conteudoService: ConteudosService) { }
 
   conteudos: Conteudo [] = [];
 
   ngOnInit() {
+    this.conteudoService.getAll()
+      .subscribe(data =>this.conteudos = data, err =>{alert('Aconteceu um erro!'); });
+
     this.conteudos= [{
       'codigo': 1,
       'nome': 'conteudo de portugues',
