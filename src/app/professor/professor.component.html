@@ -29,59 +29,59 @@
               <button type="button" (click)="excluir()" class="btn btn-danger">Excluir</button>
               <button type="button" (click)="pesquisar()" class="btn btn-warning">Pesquisar</button>
               <br /><br />
-              <form class="was-validated">
+              <form class="was-validated form-row" #cadastro="ngForm" (ngSubmit)="salvar()">
                   <div class="form-row">
                     <div class="form-group col-md-2">
-                      <label for="inputCodigo">Codigo</label>
+                      <label for="Codigo">Codigo</label>
                       <input type="text" class="form-control" name="txtCodigo" disabled [(ngModel)]="professor.codigo">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputNome">Nome</label>
-                      <input type="text" class="form-control is-valid" placeholder="Nome" required [(ngModel)]="professor.nome" name="txtNome">
-                      <div class="invalid-feedback">
-                           Digite o nome.
+                      <label for="nome">Nome</label>
+                      <input type="text" class="form-control is-valid" #nome="ngModel" placeholder="Nome" required [(ngModel)]="professor.nome" name="nome">
+                      <div [hidden]="nome.valid" class="invalid-feedback">
+                          <p>Nome incompleto</p>
                       </div>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="inputAreaFormacao">Área de Formação</label>
-                        <input type="text" class="form-control is-valid" placeholder="Área de Formação" required [(ngModel)]="professor.cargo" name="textArea">
-                        <div class="invalid-feedback">Digite a área de formação. </div>
+                        <label for="AreaFormacao">Área de Formação</label>
+                        <input type="text" class="form-control is-valid" #area="ngModel" placeholder="Área de Formação" required [(ngModel)]="professor.cargo" name="area">
+                        <div [hidden]="area.valid" class="invalid-feedback">Digite a área de formação. </div>
                       </div>
                   </div>
                   <!-- -->
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="inputEndereco">Endereço</label>
-                      <input type="text" class="form-control is-valid" placeholder="Endereço" required [(ngModel)]="professor.endereco" name="txtEndereco" >
-                      <div class="invalid-feedback">Digite o endereço. </div>
+                      <label for="endereco">Endereço</label>
+                      <input type="text" class="form-control is-valid" #endereco="ngModel" placeholder="Endereço" required [(ngModel)]="professor.endereco" name="endereco" >
+                      <div [hidden]="endereco.valid" class="invalid-feedback">Digite o endereço. </div>
                     </div>
                     <div class="form-group col-md-4">
-                      <label for="inputCidade">Cidade</label>
-                      <input type="text" class="form-control is-valid" placeholder="Cidade" required [(ngModel)]="professor.cidade" name="txtCidade">
-                      <div class="invasdlid-feedback">Digite o cidade. </div>
+                      <label for="cidade">Cidade</label>
+                      <input type="text" class="form-control is-valid" #cidade="ngModel" placeholder="Cidade" required [(ngModel)]="professor.cidade" name="cidade">
+                      <div [hidden]="endereco.valid"class="invalid-feedback">Digite a cidade. </div>
                     </div>
                     <div class="form-group col-md-2">
-                        <label for="inputCep">CEP</label>
-                        <input type="text" class="form-control is-valid" placeholder="CEP" required [(ngModel)]="professor.cep" name="txtCep">
-                        <div class="invalid-feedback">Digite o CEP. </div>
+                        <label for="cep">CEP</label>
+                        <input type="text" class="form-control is-valid" #cep="ngModel" placeholder="CEP" required [(ngModel)]="professor.cep" name="cep">
+                        <div [hidden]="cep.valid" class="invalid-feedback">Digite o CEP. </div>
                     </div>
                   </div>                
                   <!-- -->
                   <div class="form-row">
                       <div class="form-group col-md-4">
-                        <label for="inputPais">Pais</label>
-                        <input type="text" class="form-control is-valid" placeholder="Pais" required [(ngModel)]="professor.pais" name="txtPais">
-                        <div class="invalid-feedback">Digite o pais. </div>
+                        <label for="pais">Pais</label>
+                        <input type="text" class="form-control is-valid" #pais="ngModel" placeholder="Pais" required [(ngModel)]="professor.pais" name="pais">
+                        <div [hidden]="pais.valid" class="invalid-feedback">Digite o pais. </div>
                       </div>
                       <div class="form-group col-md-4">
-                        <label for="inputTelefone">Telefone</label>
-                        <input type="text" class="form-control is-valid" placeholder="Telefone" required [(ngModel)]="professor.telefone" name="txtTelefone">
-                        <div class="invalid-feedback">Digite o telefone. </div>
+                        <label for="telefone">Telefone</label>
+                        <input type="text" class="form-control is-valid" #telefone="ngModel" placeholder="Telefone" required [(ngModel)]="professor.telefone" name="telefone">
+                        <div [hidden]="telefone.valid" class="invalid-feedback">Digite o telefone. </div>
                       </div>
                       <div class="form-group col-md-4">
-                          <label for="inputFax">E-mail</label>
-                          <input type="text" class="form-control is-valid" placeholder="E-mail" required [(ngModel)]="professor.email" name="txtEmail">
-                          <div class="invalid-feedback">Digite o E-mail. </div>
+                          <label for="email">E-mail</label>
+                          <input type="text" class="form-control is-valid" #email="ngModel"  placeholder="E-mail" required [(ngModel)]="professor.email" name="email">
+                          <div [hidden]="email.valid" class="invalid-feedback">Digite o E-mail. </div>
                       </div>
                     </div> 
                 </form>

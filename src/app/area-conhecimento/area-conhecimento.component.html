@@ -33,16 +33,16 @@
               <button type="button" (click)="excluir()" class="btn btn-danger">Excluir</button>
               <button type="button" (click)="pesquisar()" class="btn btn-warning">Pesquisar</button>
               <br /><br />
-              <form class="was-validated">
+              <form class="was-validated form-row" #cadastro="ngForm" (ngSubmit)="salvar()">
                   <div class="form-row">
                     <div class="form-group col-md-2">
-                      <label for="inputCodigo">Codigo</label>
+                      <label for="codigo">Codigo</label>
                       <input type="text" class="form-control" disabled [(ngModel)]="areaConhecimento.codigo" name="txtCodigo">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputNome">Nome</label>
-                      <input type="text" class="form-control is-valid" required [(ngModel)]="areaConhecimento.nome" name="txtNome">
-                      <div class="invalid-feedback">
+                      <label for="nome">Nome</label>
+                      <input type="text" class="form-control is-valid" #nome="ngModel" required [(ngModel)]="areaConhecimento.nome" name="txtNome">
+                      <div [hidden]="nome.valid" class="invalid-feedback">
                            Digite o nome.
                       </div>
                     </div>

@@ -29,32 +29,32 @@
               <button type="button" (click)="excluir()" class="btn btn-danger">Excluir</button>
               <button type="button" (click)="pesquisar()" class="btn btn-warning">Pesquisar</button>
               <br /><br />
-              <form name="formCadastro" class="was-validated">
+              <form name="formCadastro" class="was-validated form-row" #cadastro="ngForm" (ngSubmit)="salvar()">
                   <div class="form-row">
                     <div class="form-group col-md-2">
-                          <label for="inputCodigo">Codigo</label>
+                          <label for="codigo">Codigo</label>
                           <input type="text" class="form-control" disabled required [(ngModel)]="conteudo.codigo" name="txtCodigo" >
                     </div>
                     <div class="form-group col-md-4">
-                      <label for="inputNome">Nome</label>
-                      <input type="text" class="form-control is-valid" placeholder="Nome" required [(ngModel)]="conteudo.nome" name="txtNome">
-                      <div class="invalid-feedback">
+                      <label for="nome">Nome</label>
+                      <input type="text" class="form-control is-valid" #nome="ngModel" placeholder="Nome" required [(ngModel)]="conteudo.nome" name="txtNome">
+                      <div [hidden]="nome.valid" class="invalid-feedback">
                         Digite o titulo do conteudo.
                    </div>
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputTitulo">Descricao</label>
-                      <input type="text" class="form-control is-valid" placeholder="Descrição" required [(ngModel)]="conteudo.descricao" name="txtDescricao">
-                      <div class="invalid-feedback">
+                      <label for="titulo">Descricao</label>
+                      <input type="text" class="form-control is-valid" #descricao="ngModel" placeholder="Descrição" required [(ngModel)]="conteudo.descricao" name="txtDescricao">
+                      <div [hidden]="descricao.valid" class="invalid-feedback">
                            Digite a descricao.
                       </div>
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-4">
-                      <label for="inputAutor">Competência</label>
-                      <input type="text" class="form-control is-valid" placeholder="Competência" required [(ngModel)]="conteudo.competencia" name="selCompetencia">
-                      <div class="invalid-feedback">
+                      <label for="competencia">Competência</label>
+                      <input type="text" class="form-control is-valid" #competencia="ngModel" placeholder="Competência" required [(ngModel)]="conteudo.competencia" name="selCompetencia">
+                      <div [hidden]="competencia.valid" class="invalid-feedback">
                            Digite a competência.
                       </div>
                     </div>

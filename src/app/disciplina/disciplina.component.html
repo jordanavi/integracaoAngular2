@@ -29,17 +29,17 @@
               <button type="button" (click)="excluir()" class="btn btn-danger">Excluir</button>
               <button type="button" (click)="pesquisar()" class="btn btn-warning">Pesquisar</button>
               <br /><br />
-              <form class="was-validated">
+              <form class="was-validated form-row" #cadastro="ngForm" (ngSubmit)="salvar()">
                   <div class="form-row">
                     <div class="form-group col-md-2">
-                      <label for="inputCodigo">Codigo</label>
+                      <label for="codigo">Codigo</label>
                       <input type="text" class="form-control" disabled [(ngModel)]="disciplina.codigo" name="txtCodigo">
                     </div>
                     <!-- Criar uma linha para nome -->
                     <div class="form-group col-md-6">
-                      <label for="inputNome">Descrição</label>
-                      <input type="text" class="form-control is-valid" placeholder="Descrição" required [(ngModel)]="disciplina.descricao" name="txtDescricao">
-                      <div class="invalid-feedback">
+                      <label for="nome">Descrição</label>
+                      <input type="text" class="form-control is-valid" #descricao="ngModel" placeholder="Descrição" required [(ngModel)]="disciplina.descricao" name="txtDescricao">
+                      <div [hidden]="descricao.valid" class="invalid-feedback">
                            Digite a descrição.
                       </div>
                     </div>
