@@ -4,10 +4,11 @@ import { ProfessorComponent } from './professor.component';
 import { professoresRouting } from './professores.routing';
 import { FormsModule } from '@angular/forms';
 import { ProfessoresService } from './professores.service';
+import { ProfessorFormComponent } from './professor-form/professor-form.component';
 
 @NgModule({
     imports: [CommonModule, professoresRouting, FormsModule],
-    declarations: [ProfessorComponent],
+    declarations: [ProfessorComponent, ProfessorFormComponent],
     providers: [ProfessoresService]
 })
 export class ProfessoresModule{ }
