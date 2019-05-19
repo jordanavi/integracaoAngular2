@@ -8,9 +8,8 @@ import { ConteudoFormComponent } from './conteudo-form/conteudo-form.component';
 
 @NgModule({
     imports: [
-        CommonModule, conteudoRouting, FormsModule
-    ],
-    declarations: [ConteudoComponent, ConteudoFormComponent],
-    providers: [ConteudosService]
+        CommonModule, conteudoRouting, FormsModule],
+        declarations: [ConteudoComponent, ConteudoFormComponent],
+        providers: [ConteudosService]
 })
 export class ConteudosModule{ }

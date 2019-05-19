@@ -23,6 +23,8 @@ import { ProfessorComponent } from './professor/professor.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { DisciplinaFormComponent } from './disciplina/disciplina-form/disciplina-form.component';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -40,6 +42,8 @@ import { DisciplinaFormComponent } from './disciplina/disciplina-form/disciplina
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
+    FormsModule,
+    HttpModule,
     /*--------------imports copiado do menu---------------*/
     BrowserAnimationsModule,
     MatIconModule,

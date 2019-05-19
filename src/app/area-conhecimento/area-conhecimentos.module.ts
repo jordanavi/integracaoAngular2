@@ -8,9 +8,8 @@ import { AreaConhecimentoFormComponent } from './area-conhecimento-form/area-con
 
 @NgModule({
     imports: [
-        CommonModule, areaConhecimentoRouting, FormsModule
-    ],
-    declarations: [AreaConhecimentoComponent, AreaConhecimentoFormComponent],
-    providers: [AreaConhecimentosService]
+        CommonModule, areaConhecimentoRouting, FormsModule],
+        declarations: [AreaConhecimentoComponent, AreaConhecimentoFormComponent],
+        providers: [AreaConhecimentosService]
 })
 export class AreaConhecimentosModule{ }

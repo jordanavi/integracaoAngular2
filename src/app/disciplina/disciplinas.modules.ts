@@ -7,9 +7,8 @@ import { DisciplinasService } from './disciplinas.service';
 
 @NgModule({
     imports: [
-        CommonModule, disciplinaRouting, FormsModule
-    ],
-    declarations: [DisciplinaComponent],
-    providers: [DisciplinasService]
+        CommonModule, disciplinaRouting, FormsModule],
+        declarations: [DisciplinaComponent],
+        providers: [DisciplinasService]
 })
 export class DisciplinasModule{ }
