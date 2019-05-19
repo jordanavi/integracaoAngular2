@@ -33,7 +33,7 @@
               <button type="button" (click)="excluir()" class="btn btn-danger">Excluir</button>
               <button type="button" (click)="pesquisar()" class="btn btn-warning">Pesquisar</button>
               <br /><br />
-              <form class="was-validated form-row" #cadastro="ngForm" (ngSubmit)="salvar()">
+              <form class="was-validated" #cadastro="ngForm" (ngSubmit)="salvar()">
                   <div class="form-row">
                     <div class="form-group col-md-2">
                       <label for="codigo">Codigo</label>
