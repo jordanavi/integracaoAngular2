@@ -44,7 +44,9 @@ export class ProfessorComponent implements OnInit {
       )
     );
 
-    this.professores= [{
+    this.pesquisarTodos();
+
+/*    this.professores= [{
       'codigo': 1,
       'nome':'Joao da Cunha',
       'formacao':'Letras',
@@ -54,7 +56,13 @@ export class ProfessorComponent implements OnInit {
       'pais':'Brasil',
       'telefone':'34998685479',
       'email':'joaocunha@iftm.edu.br'
-    }]
+    }] */
+  }
+
+  pesquisarTodos() {
+    this.professorService.getAll()
+    .subscribe(data =>this.professores = data, err =>{alert('Aconteceu um erro!'); });
+
   }
 
     /******** */
@@ -67,7 +75,7 @@ export class ProfessorComponent implements OnInit {
   }
   
   voltar() {
-    this.router.navigate(['/professores']);
+    this.router.navigate(['/professor']);
    }
   
   salvar() {
@@ -79,6 +87,7 @@ export class ProfessorComponent implements OnInit {
       }
     this.novo();
     this.voltar();
+    this.pesquisarTodos();
     result.subscribe(data => alert('sucesso ' +data),
     err => {
       alert("An error occurred. "+ err);
@@ -102,12 +111,10 @@ export class ProfessorComponent implements OnInit {
     }
   }
   
-    /******** 
+     
     
-    this.professorService.getAll()
-      .subscribe(data =>this.professores = data, err =>{alert('Aconteceu um erro!'); });
+    
 
-*/
   }
 
 
