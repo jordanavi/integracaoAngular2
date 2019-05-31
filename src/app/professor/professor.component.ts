@@ -62,7 +62,6 @@ export class ProfessorComponent implements OnInit {
   pesquisarTodos() {
     this.professorService.getAll()
     .subscribe(data =>this.professores = data, err =>{alert('Aconteceu um erro!'); });
-
   }
 
     /******** */
@@ -85,10 +84,11 @@ export class ProfessorComponent implements OnInit {
       } else {
       result = this.professorService.update(this.professor);
       }
+    
     this.novo();
     this.voltar();
-    this.pesquisarTodos();
-    result.subscribe(data => alert('sucesso ' +data),
+    
+    result.subscribe(data => {alert('sucesso ' +data); this.pesquisarTodos();},
     err => {
       alert("An error occurred. "+ err);
       });
