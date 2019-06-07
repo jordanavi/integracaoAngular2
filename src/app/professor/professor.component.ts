@@ -46,6 +46,7 @@ export class ProfessorComponent implements OnInit {
 
     this.pesquisarTodos();
 
+
 /*    this.professores= [{
       'codigo': 1,
       'nome':'Joao da Cunha',
