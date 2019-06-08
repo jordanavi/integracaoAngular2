@@ -25,6 +25,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     ConteudoComponent,
     DisciplinaComponent,
     ProfessorComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
