@@ -32,8 +32,8 @@
               <form class="was-validated" #cadastro="ngForm" (ngSubmit)="salvar()">
                   <div class="form-row">
                     <div class="form-group col-md-2">
-                      <label for="Codigo">Codigo</label>
-                      <input type="text" class="form-control" name="txtCodigo" disabled [(ngModel)]="professor.codigo">
+                      <label for="codigo">Codigo</label>
+                      <input type="text" class="form-control" name="codigo" disabled [(ngModel)]="professor.codigo">
                     </div>
                     <div class="form-group col-md-6">
                       <label for="nome">Nome</label>
@@ -43,7 +43,7 @@
                       </div>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="AreaFormacao">Área de Formação</label>
+                        <label for="area">Área de Formação</label>
                         <input type="text" class="form-control is-valid" #area="ngModel" placeholder="Área de Formação" required [(ngModel)]="professor.cargo" name="area">
                         <div [hidden]="area.valid" class="invalid-feedback">Digite a área de formação. </div>
                       </div>
@@ -107,7 +107,7 @@
                       <a [routerLink] = "[professoresTabela.codigo]">
                       <td>{{ professoresTabela.codigo }}</td></a>
                       <td>{{ professoresTabela.nome }}</td>
-                      <td>{{ professoresTabela.AreaFormacao}}</td>
+                      <td>{{ professoresTabela.cargo}}</td>
                       <td>{{ professoresTabela.endereco }}</td>
                       <td>{{ professoresTabela.cidade }}</td>
                       <td>{{ professoresTabela.cep }}</td>
@@ -117,7 +117,7 @@
                     </tr>
                   </tbody>
                 </table>
-                <!-- <span ng-show="(professores | filter: criterio).length == 0">Infelizmente  n&atilde;o temos o que voc&ecirc; est&aacute; procurando</span> -->
+                <span ng-show="(professores | filter: criterio).length == 0">Infelizmente  n&atilde;o temos o que voc&ecirc; est&aacute; procurando</span>
             </div>
         </div>
   </div>

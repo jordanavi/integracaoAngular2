@@ -1,4 +1,3 @@
-/*import {Routes, RouterModule } from '@angular/router'*/
 import { RouterModule, Routes } from '@angular/router';
 import { ProfessorComponent } from './professor/professor.component';
 import { ConteudoComponent } from './conteudo/conteudo.component';
@@ -55,7 +54,7 @@ export const routes : Routes = [
     },
 
     {
-        path: 'professores',
+        path: 'professor',
         loadChildren: 'app/professor/professores.module#ProfessoresModule',
         canActivate: [AuthGuard]
     },

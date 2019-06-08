@@ -5,9 +5,12 @@ import { professoresRouting } from './professores.routing';
 import { FormsModule } from '@angular/forms';
 import { ProfessoresService } from './professores.service';
 
+
 @NgModule({
     imports: [CommonModule, professoresRouting, FormsModule],
     declarations: [ProfessorComponent],
     providers: [ProfessoresService]
 })
-export class ProfessoresModule{ }
+export class ProfessoresModule{
+
+ }
