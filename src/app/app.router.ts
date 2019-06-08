@@ -5,6 +5,8 @@ import { ConteudoComponent } from './conteudo/conteudo.component';
 import { DisciplinaComponent } from './disciplina/disciplina.component';
 import { AreaConhecimentoComponent } from './area-conhecimento/area-conhecimento.component';
 import { HomeComponent } from './home/home.component';
+import { AuthGuard } from './login/login.guard';
+import { LoginComponent } from './login/login.component';
 
 export const routes : Routes = [
     {
@@ -18,7 +20,7 @@ export const routes : Routes = [
 
     {
         path: 'professor',
-        component: ProfessorComponent
+        component: ProfessorComponent,
     },
     {
         path: './professor/professor.component.html',
@@ -50,6 +52,16 @@ export const routes : Routes = [
     {
         path: './area-conhecimento/area-conhecimento.component.html',
         component: AreaConhecimentoComponent
+    },
+
+    {
+        path: 'professores',
+        loadChildren: 'app/professor/professores.module#ProfessoresModule',
+        canActivate: [AuthGuard]
+    },
+    {
+        path: 'signin',
+        component: LoginComponent
     }
 ];
 
