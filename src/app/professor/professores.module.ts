@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { ProfessorComponent } from './professor.component';
 import { professoresRouting } from './professores.routing';
 import { FormsModule } from '@angular/forms';
-import { ProfessoresService } from './professores.service';
+import { ProfessorService } from '../professor.service';
 
 
 @NgModule({
     imports: [CommonModule, professoresRouting, FormsModule],
     declarations: [ProfessorComponent],
-    providers: [ProfessoresService]
+    providers: [ProfessorService]
 })
 export class ProfessoresModule{
 

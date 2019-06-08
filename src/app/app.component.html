@@ -14,6 +14,16 @@
           <a routerLink="/conteudo" mat-button class="menuzao"><mat-icon>message</mat-icon>Conteúdo</a>
           <a routerLink="professor" mat-button class="menuzao"><mat-icon>account_box</mat-icon>Professor</a>
         </div>
+        <div class="nav-item active" *ngIf="!isAuth()">
+          <a class="nav-link" routerLink="signin" >
+            Login
+          </a>
+        </div>
+        <div class="nav-item active" *ngIf="isAuth()">
+          <a class="nav-link" (click)="onLogout()">
+             Logout
+          </a>
+        </div>
       </mat-toolbar-row>
     </mat-toolbar>
   
