@@ -20,6 +20,7 @@ import { AreaConhecimentoComponent } from './area-conhecimento/area-conhecimento
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { DisciplinaComponent } from './disciplina/disciplina.component';
 import { ProfessorComponent } from './professor/professor.component';
+import { UsuarioComponent } from './usuario/usuario.component'; // aqui????nao.. pode terminar
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { LoginServiceService } from './login/login-service.service';
 import { AuthGuard } from './login/login.guard';
+import { from } from 'rxjs';
 
 
 
@@ -39,6 +41,7 @@ import { AuthGuard } from './login/login.guard';
     DisciplinaComponent,
     ProfessorComponent,
     HomeComponent,
+    UsuarioComponent,
     LoginComponent
   ],
   imports: [

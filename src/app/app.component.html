@@ -15,10 +15,10 @@
           <a routerLink="professor" mat-button class="menuzao" ><mat-icon>account_box</mat-icon>Professor</a>
         </div>
         <div class="nav-item active" *ngIf="!isAuth()">
-          <a class="nav-link" routerLink="signin" >Login</a>
+          <a class="nav-link" routerLink="signin" mat-button><mat-icon>fingerprint</mat-icon>Login</a>
         </div>
         <div class="nav-item active" *ngIf="isAuth()">
-          <a class="nav-link" (click)="onLogout()">Logout</a>
+          <a class="nav-link" (click)="onLogout()" mat-button><mat-icon>highlight_off</mat-icon>Logout</a>
         </div>
       </mat-toolbar-row>
     </mat-toolbar>
