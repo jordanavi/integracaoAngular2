@@ -25,7 +25,7 @@
   
     <mat-sidenav-container fxFlexFill>
       <mat-sidenav #sidenav>
-        <mat-nav-list><!-- Menu compacto para responsividade -->
+        <mat-nav-list *ngIf="showNavBar"><!-- Menu compacto para responsividade -->
           <a routerLink="/areaConhecimento" mat-list-item><mat-icon>school</mat-icon>Area de Conhecimento</a>
           <a routerLink="/disciplina" mat-list-item><mat-icon>layers</mat-icon>Disciplina</a>
           <a routerLink="/conteudo" mat-list-item><mat-icon>library_books</mat-icon>Conteúdo</a>
