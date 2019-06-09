@@ -55,7 +55,7 @@ export const routes : Routes = [
 
     {
         path: 'professor',
-        loadChildren: 'app/professor/professores.module#ProfessoresModule',
+        loadChildren: './professor/professores.module#ProfessoresModule',
         canActivate: [AuthGuard]
     },
     {
