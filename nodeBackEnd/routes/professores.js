@@ -58,4 +58,15 @@ router.post('/',(req,res)=>{
         });
 });
 
+router.post('/',(req,res)=>{
+    Professor.update(req.body, {
+        where: {
+            codigo: req.body.codigo
+        }
+    })
+    .then(result => res.sendStatus(204))
+    .catch(error => {
+        res.status(412).json({msg:error.message});
+    });
+});
 module.exports = router;
