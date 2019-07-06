@@ -1,5 +1,5 @@
-const Sequilize = require("sequilize");
-let sequilize = new Sequilize('pds2', 'root', '',{
+const Sequelize = require("sequelize");
+let sequelize = new Sequelize('pds2', 'root', '',{
     host: 'localhost',
     dialect: 'mysql',
     operatorsAliases: false,

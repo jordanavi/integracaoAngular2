@@ -1,14 +1,14 @@
-const Sequilize = require("sequilize");
+const Sequelize = require("sequelize");
 const db = require('../config/database');
 
 const Professores = db.define('professor',{
     codigo:{
-        type: Sequilize.INTEGER,
+        type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     nome:{
-        type:Sequilize.STRING,  
+        type:Sequelize.STRING,  
         allowNull: false
     },
 })
