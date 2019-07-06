@@ -24,4 +24,17 @@ router.get("/:id", (req,res)=>{
             res.status(412).json({msg: error.message});
 });
 })
+
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
+router.get('/search/params', (req, res) => {
+    var query = `%${req.query.nome}%`;
+
+    console.log(query)
+    Professor.findAll({ where: { nome: { [Op.like]: query } } })
+        .then(professores => res.json(professores))
+        .catch(err => this.console.log(err));
+})
+
 module.exports = router;
