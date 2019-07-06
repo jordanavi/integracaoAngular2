@@ -1,7 +1,7 @@
 var app = angular.module('todoApp', [])
 .controller('ProfessorController', function($scope,$http) {
   
-  var url = 'http://localhost:9000/professores';
+  var url = 'http://localhost:3000/professores';
   
   /*$scope.nomeTela = "Cadastro de Professores";*/
 

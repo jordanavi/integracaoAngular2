@@ -19,7 +19,7 @@ export class ProfessorComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router:Router,
-              private professorService: ProfessoresService) { }
+              private Professoreservice: ProfessoresService) { }
 
   professores: Professor[] = [];
 
@@ -32,13 +32,13 @@ export class ProfessorComponent implements OnInit {
         if (params.hasOwnProperty('id')){
           this.isNew = false;
           this.professorIndex = params['id'];
-          this.professorService.get(this.professorIndex)
+          this.Professoreservice.get(this.professorIndex)
           .subscribe(data => this.professor = data);
         } else {this.isNew = true;}
       }
     );
     
-    this.professorService.professoresChanged.subscribe(
+    this.Professoreservice.professoresChanged.subscribe(
       (observable: any) => observable.subscribe(
         data => this.professor = data
       )
@@ -61,7 +61,7 @@ export class ProfessorComponent implements OnInit {
   }
 
   pesquisarTodos() {
-    this.professorService.getAll()
+    this.Professoreservice.getAll()
     .subscribe(data =>this.professores = data, err =>{alert('Aconteceu um erro!'); });
   }
 
@@ -81,9 +81,9 @@ export class ProfessorComponent implements OnInit {
   salvar() {
     let result;
     if (this.isNew) {
-      result = this.professorService.add(this.professor);
+      result = this.Professoreservice.add(this.professor);
       } else {
-      result = this.professorService.update(this.professor);
+      result = this.Professoreservice.update(this.professor);
       }
     
     this.novo();
@@ -100,7 +100,7 @@ export class ProfessorComponent implements OnInit {
       alert('Selecione algum professor');
     } else {
       if (confirm('Você realmente quer excluir o professor '+this.professor.nome+'?')) {
-        this.professorService.remove(this.professor.codigo)
+        this.Professoreservice.remove(this.professor.codigo)
         .subscribe(
           data => alert('Professor removido '+data),
           err => {

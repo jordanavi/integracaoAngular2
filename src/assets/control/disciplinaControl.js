@@ -1,7 +1,7 @@
 var app = angular.module('todoApp', [])
 .controller('DisciplinaController', function($scope,$http) {
   
-  var url = 'http://localhost:9000/disciplinas';
+  var url = 'http://localhost:3000/disciplinas';
   
   /*$scope.nomeTela = "Cadastro de Disciplinas";*/
 

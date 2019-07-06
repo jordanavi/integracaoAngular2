@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable({providedIn: 'root'})
   export class ConteudosService{
-    private url: string = 'http://localhost:9000/conteudos';
+    private url: string = 'http://localhost:3000/conteudos';
 
     conteudosChanged = new EventEmitter<Observable<Conteudo[]>>();
 

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable({providedIn: 'root'})
   export class DisciplinasService{
-    private url: string = 'http://localhost:9000/disciplinas';
+    private url: string = 'http://localhost:3000/disciplinas';
 
     disciplinasChanged = new EventEmitter<Observable<Disciplina[]>>();
 

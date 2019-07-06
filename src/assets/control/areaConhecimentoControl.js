@@ -1,7 +1,7 @@
 var app = angular.module('todoApp', [])
 .controller('EditoraController', function($scope,$http) {
   
-  var url = 'http://localhost:9000/areaConhecimentos';
+  var url = 'http://localhost:3000/areaConhecimentos';
   
   /*$scope.nomeTela = "Cadastro de Área de Conhecimento";*/
 

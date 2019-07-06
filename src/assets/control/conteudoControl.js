@@ -1,7 +1,7 @@
 var app = angular.module('todoApp', [])
 .controller('ConteudoController', function($scope,$http) {
   
-  var url = 'http://localhost:9000/conteudos';
+  var url = 'http://localhost:3000/conteudos';
   
   /*$scope.nomeTela = "Cadastro de Conteudo";*/
 

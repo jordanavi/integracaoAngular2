@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable({providedIn: 'root'})
   export class AreaConhecimentosService{
-    private url: string = 'http://localhost:9000/areaConhecimentos';
+    private url: string = 'http://localhost:3000/areaConhecimentos';
 
     areaConhecimentosChanged = new EventEmitter<Observable<AreaConhecimento[]>>();
 
