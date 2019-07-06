@@ -6,15 +6,22 @@ const app = express();
 
 app.set("json spaces", 4);
 
-app.get("/", (resp,res) => res.json({status: "Nodejs backend"}));
+const index = require('./routes/index');
+const professores = require('./routes/professores');
 
-app.get("/professores", (req,res) =>{
-    res.json(
-        [
-            {'codigo':1,'nome':'joao'},
-            {'codigo':2,'nome':'maria'}
-        ]
-    )
-});
+app.use('/',index);
+app.use('/professores',professores);
+
+
+// app.get("/", (resp,res) => res.json({status: "Nodejs backend"}));
+
+// app.get("/professores", (req,res) =>{
+//     res.json(
+//         [
+//             {'codigo':1,'nome':'joao'},
+//             {'codigo':2,'nome':'maria'}
+//         ]
+//     )
+// });
 
 app.listen(PORT,()=>console.log("Escutando na porta "+PORT));
