@@ -4,6 +4,9 @@ const PORT = 3000;
 
 const app = express();
 const db = require('./config/database');
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
 
 db.authenticate()
     .then(()=>console.log('Database connected...'))
