@@ -1,0 +1,29 @@
+{
+  "name": "nodebackend",
+  "version": "1.0.0",
+  "description": "integracao angular nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanavi/integracaoAngular2.git"
+  },
+  "keywords": [
+    "sistema",
+    "integracao",
+    "angular",
+    "nodejs"
+  ],
+  "author": "Jordana Vilela",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordanavi/integracaoAngular2/issues"
+  },
+  "homepage": "https://github.com/jordanavi/integracaoAngular2#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0"
+  }
+}
