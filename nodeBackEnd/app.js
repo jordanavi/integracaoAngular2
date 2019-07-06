@@ -4,6 +4,8 @@ const PORT = 3000;
 
 const app = express();
 
+app.set("json spaces", 4);
+
 app.get("/", (resp,res) => res.json({status: "Nodejs backend"}));
 
 app.get("/professores", (req,res) =>{
