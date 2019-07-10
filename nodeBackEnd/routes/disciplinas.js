@@ -1,0 +1,72 @@
+const express = require("express");
+const Disciplina = require('../models/disciplinas');
+const router = express.Router();
+
+router.get("/", (req,res)=>
+    Disciplina.findAll()
+        .then(result => res.json(result))
+        .catch(error =>{
+            res.status(412).json({msg: error.message});
+}));
+
+router.get("/:id", (req,res)=>{
+    Disciplina.findOne({
+        where: {
+            codigo: req.params.id,
+        }
+    }).then(result => {
+        if(result){
+            res.json(result);
+        } else {
+            res.sendStatus(404);
+        }
+        }).catch(error => {
+            res.status(412).json({msg: error.message});
+});
+})
+
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+
+router.get('/search/params', (req, res) => {
+    var query = `%${req.query.nome}%`;
+
+    console.log(query)
+    Disciplina.findAll({ where: { nome: { [Op.like]: query } } })
+        .then(disciplinas => res.json(disciplinas))
+        .catch(err => this.console.log(err));
+})
+
+router.delete("/:id", (req, res) =>{
+    Disciplina.destroy({
+        where: {
+            codigo: req.params.id
+        }
+    })
+    .then(result => res.sendStatus(204))
+    .catch(error => {
+        res.status(412).json({msg: error.message});
+        });
+})
+
+router.post('/',(req,res)=>{
+    console.log(req.body);
+    Disciplina.create(req.body)
+        .then(result => res.json(result))
+        .catch(error => {
+            res.status(412).json({msg: error.message});
+        });
+});
+
+router.post('/',(req,res)=>{
+    Disciplina.update(req.body, {
+        where: {
+            codigo: req.body.codigo
+        }
+    })
+    .then(result => res.sendStatus(204))
+    .catch(error => {
+        res.status(412).json({msg:error.message});
+    });
+});
+module.exports = router;

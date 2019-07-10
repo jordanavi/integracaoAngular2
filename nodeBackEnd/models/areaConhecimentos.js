@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const db = require('../config/database');
 
-const Professores = db.define('professor',{
+const AreaConhecimentos = db.define('areaConhecimento',{
     codigo:{
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -13,4 +13,4 @@ const Professores = db.define('professor',{
     },
 })
 
-module.exports = Professores;
+module.exports = AreaConhecimentos;
